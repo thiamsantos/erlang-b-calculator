@@ -1,19 +1,124 @@
-// Settings
-// @import 'settings/variables.styl'
-// @import 'settings/colors.styl'
+$main-color = #3F51B5
+$focus-color = #9FA8DA
+$secondary-color = #ccc
+$white = #fff
+$text-color = rgba(0,0,0,.87)
 
-// Tools
-// @import 'tools/mixins.styl'
+$shadow-key-umbra-opacity = .2
+$shadow-key-penumbra-opacity = .14
+$shadow-ambient-shadow-opacity = .12
 
-// Generic
-@import 'generic/reset.styl'
+*
+  border 0
+  margin 0
+  outline 0
+  padding 0
 
-// Base
-// @import 'base/global.styl'
-// @import 'base/typography.styl'
+  &
+  &:after
+  &:before
+    box-sizing border-box
 
-// Objects
-// @import 'objects/container.styl'
+html
+  font-size 62.5%
 
-// Components
-// @import 'components/button.styl'
+  +above(600px)
+    font-size 65.625%
+
+  +above(900px)
+    font-size 68.75%
+
+body
+  color $text-color
+  font-family 'Roboto',sans-serif
+  font-size 1.6rem
+
+.container
+  padding 3rem
+
+  +above(450px)
+    padding 5rem
+
+.title
+  font-size 3rem
+  line-height 1.8
+  margin-bottom 1.5rem
+
+.subtitle
+  font-size 1.5rem
+  line-height 1.6
+
+.focusable:focus
+  box-shadow 0 0 1px 1px $focus-color
+  outline 0
+
+.unknown-values
+  display none
+
+  &-label
+    color $main-color
+    display block
+    font-size 1.5rem
+    font-weight 700
+    padding ((3.6 - 1.5) / 2)rem 0
+
+    ^[0]:checked + &
+      color $text-color
+
+    +above(450px)
+      display inline-block
+
+      & ~ &
+        margin-left .5rem
+
+.text-field
+  margin-top 2rem
+  padding-top 2.5rem
+  position relative
+  width 100%
+
+  &__label
+    bottom 4rem
+    color $text-color
+    font-size 1.3rem
+    pointer-events none
+    position absolute
+    transition .2s cubic-bezier(.4,0,.2,1) all
+
+  &__input
+    background transparent
+    border-bottom 1px solid $secondary-color
+    color $text-color
+    display block
+    font-size 1.5rem
+    margin 0
+    outline 0
+    padding 1rem 0
+    transition .2s cubic-bezier(.4,0,.2,1) all
+    width 100%
+
+    &:focus
+      border-color $main-color
+
+      & + ^[0]__label
+        color $main-color
+
+  &.is-disabled
+    margin-top 1rem
+    opacity .54
+    padding-top 0
+
+    & ^[0]__input
+      color transparent
+      pointer-events none
+      user-select none
+
+    & ^[0]__label
+      bottom 1rem
+
+.result
+  margin-top 3rem
+  text-align center
+
+  &__item:not(:last-child)
+    margin-bottom 1rem

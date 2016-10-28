@@ -6,8 +6,8 @@ export default function channelsNumber(bp, traffic, channels, calculedBp) {
 
   if (calculedBp !== 0 && roundByLength(calculedBp) <= roundByLength(bp)) {
     return {
-      channels,
-      traffic,
+      cn: channels,
+      ot: traffic,
       bp: calculedBp
     }
   }

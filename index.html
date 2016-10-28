@@ -5,30 +5,12 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Hello World</title>
+  <title>Erlang-b Calculator</title>
   <meta name="description" content="">
   <meta name="robots" content="index, follow">
 
-  <!-- Facebook -->
-  <meta property="og:title" content="Content Title">
-  <meta property="og:description" content="Description Here">
-  <meta property="og:image" content="https://example.com/image.jpg">
-  <meta property="og:url" content="https://example.com/page.html">
-
-  <!-- Twitter -->
-  <meta name="twitter:title" content="Content Title">
-  <meta name="twitter:description" content="less than 200 characters">
-  <meta name="twitter:image" content="https://example.com/image.jpg">
-  <meta name="twitter:card" content="summary">
-
-  <!-- Google+ -->
-  <link href="https://plus.google.com/+YourPage" rel="publisher">
-  <meta itemprop="name" content="Content Title">
-  <meta itemprop="description" content="Content description less than 200 characters">
-  <meta itemprop="image" content="https://example.com/image.jpg">
-
   <!-- Icons -->
-  <link href="dist/img/favicon/favicon-16.png" rel="icon" sizes="16x16">
+  <!-- <link href="dist/img/favicon/favicon-16.png" rel="icon" sizes="16x16">
   <link href="dist/img/favicon/favicon-32.png" rel="icon" sizes="32x32">
   <link href="dist/img/favicon/favicon-48.png" rel="icon" sizes="48x48">
   <link href="dist/img/favicon/favicon-62.png" rel="icon" sizes="62x62">
@@ -39,40 +21,47 @@
   <link href="dist/img/favicon/apple-icon-120.png" rel="apple-touch-icon" sizes="120x120">
   <link href="dist/img/favicon/apple-icon-144.png" rel="apple-touch-icon" sizes="144x144">
   <link href="dist/img/favicon/apple-icon-152.png" rel="apple-touch-icon" sizes="152x152">
-  <link href="dist/img/favicon/apple-icon-180.png" rel="apple-touch-icon" sizes="180x180">
+  <link href="dist/img/favicon/apple-icon-180.png" rel="apple-touch-icon" sizes="180x180"> -->
 
   <meta name="theme-color" content="">
 
   <link href="dist/css/main.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Erlang-b Calculator</h1>
-  <p>Unknown value</p>
+  <main class="container">
+    <h1 class="title">Erlang-b Calculator</h1>
+    <p class="subtitle">Unknown value:</p>
 
-  <input class="" type="radio" id="" name="" value="" checked>
-  <label class="" for="" tabindex="0">Block Probality</label>
+    <input class="unknown-values" type="radio" id="bp-radio" name="unknown-value" value="bp" checked>
+    <label class="unknown-values-label focusable" for="bp-radio" tabindex="0">Block Probality</label>
 
-  <input class="" type="radio" id="" name="" value="">
-  <label class="" for="" tabindex="0">Offered Traffic</label>
+    <input class="unknown-values" type="radio" id="ot-radio" name="unknown-value" value="ot">
+    <label class="unknown-values-label focusable" for="ot-radio" tabindex="0">Offered Traffic</label>
 
-  <input class="" type="radio" id="" name="" value="">
-  <label class="" for="" tabindex="0">Channels Number</label>
+    <input class="unknown-values" type="radio" id="cn-radio" name="unknown-value" value="cn">
+    <label class="unknown-values-label focusable" for="cn-radio" tabindex="0">Channels Number</label>
 
-  <div class="text-field">
-    <input class="text-field__input" type="number" id="" min="1" max="100" step="1" value="1" required tabindex="0">
-    <label class="text-field__label" for="">Block Probality (in percentage)</label>
-  </div>
+    <div class="text-field js-text-field-bp is-disabled">
+      <input class="text-field__input" type="number" id="bp-input" min="1" max="100" step="1" value="1" required tabindex="0" disabled="true">
+      <label class="text-field__label" for="bp-input">Block Probality (in percentage)</label>
+    </div>
 
-  <div class="text-field">
-    <input class="text-field__input" type="number" id="" min="0" step="0.05" value="0" required tabindex="0">
-    <label class="text-field__label" for="">Traffic (in erlang)</label>
-  </div>
+    <div class="text-field js-text-field-ot">
+      <input class="text-field__input" type="number" id="ot-input" min="0" step="0.05" value="0" required tabindex="0">
+      <label class="text-field__label" for="ot-input">Traffic (in erlang)</label>
+    </div>
 
-  <div class="text-field">
-    <input class="text-field__input" type="number" id="" min="1" max="100" step="1" value="1" required tabindex="0">
-    <label class="text-field__label" for="">Channels</label>
-  </div>
+    <div class="text-field js-text-field-cn">
+      <input class="text-field__input" type="number" id="cn-input" min="1" step="1" value="1" required tabindex="0">
+      <label class="text-field__label" for="cn-input">Channels</label>
+    </div>
 
+    <div class="result">
+      <p class="result__item">Block Probality: <span class="js-result-bp">0</span></p>
+      <p class="result__item">Offered Traffic: <span class="js-result-ot">0</span></p>
+      <p class="result__item">Channels Number: <span class="js-result-cn">0</span></p>
+    </div>
+  </main>
   <script src="dist/js/main.js" async></script>
 </body>
 </html>

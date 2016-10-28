@@ -1,11 +1,11 @@
 import blockProbality from './block-probality'
-import {round} from './round'
+import {round} from './utils'
 
 export default function offeredTraffic(bp, traffic, channels, calculedBp) {
   if (calculedBp !== 0 && calculedBp >= bp) {
     return {
-      channels,
-      traffic: round(2)(traffic),
+      cn: channels,
+      ot: round(2)(traffic),
       bp: calculedBp
     }
   }
