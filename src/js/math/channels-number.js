@@ -1,16 +1,20 @@
 import blockProbality from './block-probality'
 import {round, getIndexForRound} from './utils'
 
-export default function channelsNumber(bp, traffic, channels, calculedBp) {
+export default function channelsNumber(bp, traffic) {
   const roundByLength = round(getIndexForRound(bp.toString()))
+  let channels = 0
+  let calculedBp = 0
 
-  if (calculedBp !== 0 && roundByLength(calculedBp) <= roundByLength(bp)) {
-    return {
-      cn: channels,
-      ot: traffic,
-      bp: calculedBp
-    }
+  while (calculedBp === 0 || roundByLength(calculedBp) >= roundByLength(bp)) {
+    console.log(channels, calculedBp)
+    channels += 1
+    calculedBp = blockProbality(traffic, channels)
   }
-  const newBp = blockProbality(traffic, channels + 1)
-  return channelsNumber(bp, traffic, channels + 1, newBp)
+
+  return {
+    cn: channels,
+    ot: traffic,
+    bp: calculedBp
+  }
 }

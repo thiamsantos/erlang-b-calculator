@@ -30,7 +30,7 @@ const nodes = {
   },
   defaultValues: {
     bp: '1',
-    ot: '0',
+    ot: '1',
     cn: '1'
   }
 }
@@ -63,9 +63,9 @@ const calculate = () => {
     values.cn = cnInput.value
     values.bp = blockProbality(values.ot, values.cn)
   } else if (unknown === 'ot') {
-    values = offeredTraffic(percent(bpInput.value), 0, cnInput.value, 0)
+    values = offeredTraffic(percent(bpInput.value), cnInput.value)
   } else if (unknown === 'cn') {
-    values = channelsNumber(percent(bpInput.value), cnInput.value, 0, 0)
+    values = channelsNumber(percent(bpInput.value), otInput.value)
   }
   console.log(JSON.stringify(values, null, 2))
   bpResult.textContent = values.bp

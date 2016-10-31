@@ -1,9 +1,9 @@
 import {
   divide,
-  factorial,
   pow,
   round
 } from './utils'
+import factorial from './factorial'
 import summation from './summation'
 
 export default (traffic, channels) => {

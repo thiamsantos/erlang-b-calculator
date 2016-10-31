@@ -1,4 +1,5 @@
-import {factorial, divide} from './utils'
+import {divide} from './utils'
+import factorial from './factorial'
 
 export default (powA, channels) => {
   let sum = 0
