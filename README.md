@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/thiamsantos/erlang-b-calculator/raw/master/icons/icon.svg" width="200" height="200" alt="erlang-b">
+  <img src="https://github.com/thiamsantos/erlang-b-calculator/raw/master/icons/logo.svg" width="200" height="200" alt="erlang-b">
 </p>
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
