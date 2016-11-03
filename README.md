@@ -1,11 +1,11 @@
-<!-- <p align="center">
-  <img src="https://github.com/thiamsantos/borg-boilerplate/raw/master/logo-borg.jpg" width="200" alt="borg">
-</p> -->
+<p align="center">
+  <img src="https://github.com/thiamsantos/erlang-b-calculator/raw/master/icons/icon.svg" width="200" height="200" alt="erlang-b">
+</p>
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 # Erlang-b calculator
-A simple erlang-b calculator
+A simple calculator for [erlang-b]("https://en.wikipedia.org/wiki/Erlang_(unit)#Erlang_B_formula") formula.
 
 ## Commands
 With the commands above, you have everything to start.
