@@ -5,6 +5,8 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 # Erlang-b calculator
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/thiamsantos/erlang-b-calculator.svg)](https://greenkeeper.io/)
 A simple calculator for [erlang-b]("https://en.wikipedia.org/wiki/Erlang_(unit)#Erlang_B_formula") formula.
 
 ## Commands
